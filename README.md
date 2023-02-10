@@ -1,4 +1,4 @@
-# gestao_financeira
+# Gestao_Financeira
 Um site para gestão de gastos pessoais
 
 ## Tarefas atuais
