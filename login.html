@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lançamentos</title>
+     <script>
+        $(document).ready(function(){
+          $("#enviar").click(function(){
+            var Login = $("#Login").val();
+            var Senha = $("#Senha").val();
+            $.ajax({
+          url: "usuario.php",
+          type: "POST",
+          data: "Login="+Login+"&Senha="+Senha,
+          dataType: "html"
+      
+          }).done(function(resposta) {
+            $("p").html(resposta);
+      
+          }).fail(function(jqXHR, textStatus ) {
+            console.log("Request failed: " + textStatus);
+      
+          }).always(function() {
+            console.log("completou");
+          });
+        });
+      });
+
+      
+      </script>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <div class="forms">
+            <label for="Login">Login Completo</label>
+            <input id="Login" type="Login" >
+        </div>
+        <div class="forms">
+            <label for="Senha">Senha</label>
+            <input id="Senha" type="Senha" >
+        </div>
+        <div class="forms">
+            <label for="senha">Senha</label>
+            <input id="senha" type="senha" >
+        </div>
+    </main>
+</body>
+</html>

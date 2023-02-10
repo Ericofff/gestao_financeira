@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lançamentos</title>
+     <script>
+        $(document).ready(function(){
+          $("#enviar").click(function(){
+            var nome = $("#nome").val();
+            var idade = $("#idade").val();
+            var senha = $("#senha").val();
+            $.ajax({
+          url: "usuario.php",
+          type: "POST",
+          data: "nome="+nome+"&idade="+idade+"&senha="+senha,
+          dataType: "html"
+      
+          }).done(function(resposta) {
+            $("p").html(resposta);
+      
+          }).fail(function(jqXHR, textStatus ) {
+            console.log("Request failed: " + textStatus);
+      
+          }).always(function() {
+            console.log("completou");
+          });
+        });
+      });
+
+      
+      </script>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <div class="container">
+      <div class="form-image">
+        <img src="img/bg.svg">
+      </div>
+
+      <div class="form-header">
+        <div class="title">
+          <h1>Cadastre-se</h1>
+        </div>
+        <div class="logi-button">
+          <button><a href="#">Entrar</a></button>
+        </div>
+      </div>
+      <div class="input-group">
+        <div class="input-box">
+            <label for="Nome">Primeiro nome</label>
+            <input id="nome" type="text" >
+        </div>
+        <div class="input-box">
+            <label for="Nome2">Sobrenome</label>
+            <input id="Nome2" type="text" >
+        </div>
+        <div class="input-box">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" >
+        </div>
+        <div class="input-box">
+            <label for="number">Celular</label>
+            <input id="number" type="number" >
+        </div>
+        <div class="input-box">
+            <label for="senha">Senha</label>
+            <input id="Senha" type="password" >
+        </div>
+        <div class="input-box">
+            <label for="senha2">Confirme sua senha</label>
+            <input id="Senha2" type="password" >
+        </div>
+      </div>
+      <!-- gênero -->
+      <div class="gender-inputs">
+         <div class="gender-title">
+           <h6>Gênero</h6>
+         </div>
+         <div class="gender-group">
+           <div class="gender-input">
+              <input type="radio" name="gender" id="male">
+              <label for="male">Masculino</label>
+            </div>
+            <div class="gender-input">
+             <input type="radio" name="gender" id="female">
+             <label for="female">Feminino</label>
+           </div>
+           <div class="gender-input">
+             <input type="radio" name="gender" id="others">
+             <label for="others">Outros</label>
+           </div>
+          </div>
+        </div>
+
+        <div class="continue-button">
+          <button><a href="#">Continuar</a></button>
+        </div>
+
+      </div>
+    </div>
+</body>
+</html>
