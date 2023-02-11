@@ -4,51 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Lançamentos</title>
-     <script>
-        $(document).ready(function(){
-          $("#enviar").click(function(){
-            var Login = $("#Login").val();
-            var Senha = $("#Senha").val();
-            $.ajax({
-          url: "usuario.php",
-          type: "POST",
-          data: "Login="+Login+"&Senha="+Senha,
-          dataType: "html"
-      
-          }).done(function(resposta) {
-            $("p").html(resposta);
-      
-          }).fail(function(jqXHR, textStatus ) {
-            console.log("Request failed: " + textStatus);
-      
-          }).always(function() {
-            console.log("completou");
-          });
-        });
-      });
-
-      
-      </script>
-</head>
+    <script crossorigin="anonymous" src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
+    <script src="js/MaquinaDeEscrever.js"></script>
+  </head>
 <body>
-    <header>
-        <nav></nav>
-    </header>
-    <main>
-        <div class="forms">
-            <label for="Login">Login Completo</label>
-            <input id="Login" type="Login" >
-        </div>
-        <div class="forms">
-            <label for="Senha">Senha</label>
-            <input id="Senha" type="Senha" >
-        </div>
-        <div class="forms">
-            <label for="senha">Senha</label>
-            <input id="senha" type="senha" >
-        </div>
-    </main>
+  <div class="container">
+      <div class="form-image">
+          <img src="img/bg.svg" alt="">
+      </div>
+      <div class="form">
+        <div class="sub-form">
+              <div class="form-header">
+                  <div class="title">
+                      <h1 class="login"></h1>
+                  </div>
+                  <div class="register-button">
+                      <a href="index.html">Cadastrar</a>
+                  </div>
+              </div>
+
+              <div class="input-group">
+                  <div class="input-box">
+                      <label for="email">E-mail</label>
+                      <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                  </div>
+                  <div class="input-box">
+                      <label for="password">Senha</label>
+                      <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                  </div>
+              </div>
+
+              <div class="robot-inputs">
+                  <div class="robot-title">
+                      <h6>Verificação</h6>
+                  </div>
+
+                  <div class="robot-group">
+                      <div class="robot-input">
+                          <input id="robot" type="radio" name="robot">
+                          <label for="robot">Não sou um robô</label>
+                      </div>
+              </div>
+
+              <div class="continue-button">
+                  <button><a href="#">Entrar</a> </button>
+              </div>
+         </div class "ai"iv>
+  </div>
 </body>
 </html>
