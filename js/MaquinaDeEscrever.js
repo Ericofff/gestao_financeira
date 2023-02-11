@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .move(-2)
     .type('-', {delay: 500})
     .move(2)
+    .type(' ✔')
     .go()
    
 });
