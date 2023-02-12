@@ -6,11 +6,15 @@
     align-items: center;
     background-color: #fde3a7d7;
     padding: 1rem;
+    animation: entrada 1s forwards;
+
 }
 
 .form-image img {
     width: 31rem;
 	transition: .3s;
+    animation: opacity 1s forwards;
+
 }
 .form-image img:hover {
     width: 33rem;
@@ -24,6 +28,8 @@
     align-items: center;
     background-color: #fff;
     padding: 3rem;
+    animation: entrada2 1s forwards;
+
 }
 
 .form-header {
@@ -73,6 +79,26 @@
     width: 10rem;
 
 }
+
+
+@keyframes entrada {
+    0%{
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+}
+
+@keyframes entrada2 {
+    0%{
+        transform: translateX(+50%);
+    }
+}
+
 
 .input-group {
     display: flex;
