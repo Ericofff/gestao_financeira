@@ -252,5 +252,8 @@ body {
 
 /* validação formulário */
 .span-required{
-    font-size: .75rem;
+    display: none;
+    font-size: 12px;
+    margin: 2px 0 0px 1px;
+    color: #ff0000;
 }
