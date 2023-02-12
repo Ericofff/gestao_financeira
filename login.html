@@ -29,30 +29,27 @@
               <div class="input-group">
                   <div class="input-box">
                       <label for="email">E-mail</label>
-                      <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                      <input id="email" type="email" name="email" placeholder="Digite seu e-mail" class="required" oninput="emailValidate()">
+                      <span class="span-required">Digite um email válido</span>
                   </div>
                   <div class="input-box">
                       <label for="password">Senha</label>
-                      <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                      <input id="password" type="password" name="password" placeholder="Digite sua senha" class="required" oninput="mainPasswordValidate()">
+                      <span class="span-required">Senha de no mínimo 8 caracteres</span>
                   </div>
               </div>
 
               <div class="robot-inputs">
                   <div class="robot-title">
-                      <h6>Verificação</h6>
+                      <h6>Seja Bem-Vindo Novamente!</h6>
                   </div>
-
-                  <div class="robot-group">
-                      <div class="robot-input">
-                          <input id="robot" type="radio" name="robot">
-                          <label for="robot">Não sou um robô</label>
-                      </div>
               </div>
 
               <div class="continue-button">
-                  <button><a href="#">Entrar</a> </button>
+                  <button><a id="login" href="#">Entrar</a> </button>
               </div>
-         </div class "ai"iv>
+         </div>
   </div>
+  <script src="/js/login.js"></script>
 </body>
 </html>
