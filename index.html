@@ -29,32 +29,38 @@
               <div class="input-group">
                   <div class="input-box">
                       <label for="Nome">Primeiro nome</label>
-                      <input id="Nome" type="text" name="Nome" placeholder="Digite seu primeiro nome" required>
+                      <input id="Nome" type="text" name="Nome" placeholder="Digite seu primeiro nome" class=required>
+                      <span class="span-required">Nome deve ter no minínimo 3 caracteres</span>
                   </div>
 
                   <div class="input-box">
                       <label for="sobrenome">Sobrenome</label>
-                      <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                      <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" class=required>
+                      <span class="span-required"></span>
                   </div>
                   <div class="input-box">
                       <label for="email">E-mail</label>
-                      <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                      <input id="email" type="email" name="email" placeholder="Digite seu melhor e-mail" class=required>
+                      <span class="span-required"></span>
                   </div>
 
                   <div class="input-box">
                       <label for="number">Idade</label>
-                      <input id="number" type="number" name="number" placeholder="Digite sua idade" required>
+                      <input id="number" type="number" name="number" placeholder="Digite sua idade" class=required>
+                      <span class="span-required"></span>
                   </div>
 
                   <div class="input-box">
                       <label for="password">Senha</label>
-                      <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                      <input id="password" type="password" name="password" placeholder="Digite sua senha" class=required>
+                      <span class="span-required"></span>
                   </div>
 
 
                   <div class="input-box">
                       <label for="confirmPassword">Confirme sua Senha</label>
-                      <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
+                      <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" class=required>
+                      <span class="span-required"></span>
                   </div>
 
               </div>
@@ -83,9 +89,10 @@
               </div>
 
               <div class="continue-button">
-                  <button><a href="#">Finalizar Cadastro</a> </button>
+                  <button><a id="validar" href="#">Finalizar Cadastro</a> </button>
               </div>
          </div class "ai"iv>
   </div>
+  <script src="/js/form.js"></script>
 </body>
 </html>
