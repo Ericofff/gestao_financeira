@@ -21,11 +21,8 @@
                   <div class="title">
                       <h1 class="login"></h1>
                   </div>
-                  <div class="register-button">
-                      <a href="index.php">Cadastrar</a>
-                  </div>
-              </div>
-
+                </div>
+                
               <div class="input-group">
                   <div class="input-box">
                       <label for="email">E-mail</label>
@@ -46,10 +43,13 @@
               </div>
 
               <div class="continue-button">
-                  <button><a id="login" href="#">Entrar</a> </button>
+                  <button><a id="login" href="#">Finalizar Login</a> </button>
               </div>
          </div>
+         <div class="register-button">
+             <p>Não possui uma conta? <a href="index.php">Cadastrar</a></p>
+         </div>
   </div>
-  <script src="/js/login.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>

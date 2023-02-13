@@ -43,25 +43,15 @@
 .register-button {
     display: flex;
     align-items: center;
+    margin-top: 1rem;
 }
 
-.register-button a {
-    border: none;
-    background-color: #6c63ff;
-    padding: .8rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.register-button a:hover {
-    background-color: #6b63fff1;
-}
 
 .register-button a {
 	font-size: 1rem;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 500;
-    color: #fff;
+    color: #6c63ff;
 }
 
 .form-header h1::after {
@@ -83,7 +73,7 @@
 
 @keyframes entrada {
     0%{
-        transform: translateX(-50%);
+        transform: translateX(+50%);
     }
 }
 
@@ -95,7 +85,7 @@
 
 @keyframes entrada2 {
     0%{
-        transform: translateX(+50%);
+        transform: translateX(-50%);
     }
 }
 

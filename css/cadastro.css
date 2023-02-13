@@ -62,12 +62,13 @@ body {
 
 .form {
     width: 50%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    padding: 3rem;
+    padding: 4rem;
     transition: 0.5s;
     animation: entrada2 1s forwards;
 }
@@ -82,25 +83,14 @@ body {
 .login-button {
     display: flex;
     align-items: center;
-}
-
-.login-button a {
-    border: none;
-    background-color: #6c63ff;
-    padding: .8rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-button a:hover {
-    background-color: #6b63fff1;
+    margin-top: 1rem;
 }
 
 .login-button a {
 	font-size: 1rem;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 500;
-    color: #fff;
+    color: #6c63ff;
 }
 
 .form-header h1::after {

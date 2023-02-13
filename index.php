@@ -44,20 +44,17 @@
                   <div class="title">
                       <h1 class="cadastro"></h1>
                   </div>
-                  <div class="login-button">
-                      <a href="login.php">Entrar</a>
-                  </div>
-              </div>
-
-              <div class="input-group">
-                  <div class="input-box">
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-box">
                       <label for="Nome">Primeiro Nome</label>
                       <input id="Nome" type="text" name="Nome" placeholder="Digite seu primeiro nome" class="required" oninput="nameValidate()">
                       <span class="span-required">Nome deve ter no minímo 3 caracteres</span>
-                  </div>
-
-                  <div class="input-box">
-                      <label for="sobrenome">Sobrenome</label>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="sobrenome">Sobrenome</label>
                       <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" class="required" oninput="lastnameValidate()">
                       <span class="span-required">Minínimo de 3 caracteres</span>
                   </div>
@@ -71,51 +68,54 @@
                       <label for="number">Idade</label>
                       <input id="number" type="number" name="number" placeholder="Digite sua idade" oninput="yearValidate()" class="required">
                       <span class="span-required">Idade inválida</span>
-                  </div>
+                    </div>
 
-                  <div class="input-box">
+                    <div class="input-box">
                       <label for="password">Senha</label>
                       <input id="password" type="password" name="password" placeholder="Digite sua senha" class="required" oninput="mainPasswordValidate()">
                       <span class="span-required">Senha de no mínimo 8 caracteres</span>
                   </div>
-
-
+                  
+                  
                   <div class="input-box">
                       <label for="confirmPassword">Confirme sua Senha</label>
                       <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" class="required" oninput="comparePassword()">
                       <span class="span-required">Senhas devem ser compatíveis</span>
-                  </div>
+                    </div>
 
-              </div>
+                </div>
+                
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                    </div>
 
-              <div class="gender-inputs">
-                  <div class="gender-title">
-                      <h6>Gênero</h6>
-                  </div>
-
-                  <div class="gender-group">
-                      <div class="gender-input">
+                    <div class="gender-group">
+                        <div class="gender-input">
                           <input id="female" type="radio" name="gender">
                           <label for="female">Feminino</label>
-                      </div>
-
-                      <div class="gender-input">
-                          <input id="male" type="radio" name="gender">
+                        </div>
+                        
+                        <div class="gender-input">
+                            <input id="male" type="radio" name="gender">
                           <label for="male">Masculino</label>
-                      </div>
-
-                      <div class="gender-input">
+                        </div>
+                        
+                        <div class="gender-input">
                           <input id="others" type="radio" name="gender">
                           <label for="others">Outros</label>
                       </div>
-                  </div>
+                    </div>
               </div>
-
+              
               <div class="continue-button">
                   <button><a id="validar" href="#">Finalizar Cadastro</a> </button>
-              </div>
-         </div>
-  </div>
-  <script src="/js/cadastro.js"></script>
-</body>
-</html>
+                </div>
+            </div>
+            <div class="login-button">
+                <p>Possuí uma conta? <a href="login.php">Entrar</a></p>
+            </div>
+        </div>
+        <script src="js/cadastro.js"></script>
+    </body>
+    </html>
