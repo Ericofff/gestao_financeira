@@ -44,7 +44,7 @@ body {
 
 @keyframes entrada {
     0%{
-        transform: translateX(-50%);
+        transform: translateX(+50%);
     }
 }
 
@@ -56,7 +56,7 @@ body {
 
 @keyframes entrada2 {
     0%{
-        transform: translateX(+50%);
+        transform: translateX(-50%);
     }
 }
 
