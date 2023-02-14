@@ -87,24 +87,7 @@
                 
                 <div class="gender-inputs">
                     <div class="gender-title">
-                        <h6>Gênero</h6>
-                    </div>
-
-                    <div class="gender-group">
-                        <div class="gender-input">
-                          <input id="female" type="radio" name="gender">
-                          <label for="female">Feminino</label>
-                        </div>
-                        
-                        <div class="gender-input">
-                            <input id="male" type="radio" name="gender">
-                          <label for="male">Masculino</label>
-                        </div>
-                        
-                        <div class="gender-input">
-                          <input id="others" type="radio" name="gender">
-                          <label for="others">Outros</label>
-                      </div>
+                        <h6>Seja Bem Vindo!</h6>
                     </div>
               </div>
               

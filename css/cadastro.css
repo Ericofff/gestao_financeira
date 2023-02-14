@@ -44,7 +44,7 @@ body {
 
 @keyframes entrada {
     0%{
-        transform: translateX(+50%);
+        transform: translateX(-50%);
     }
 }
 
@@ -56,7 +56,7 @@ body {
 
 @keyframes entrada2 {
     0%{
-        transform: translateX(-50%);
+        transform: translateX(+50%);
     }
 }
 
@@ -139,8 +139,7 @@ body {
     outline: 1px solid #6c63ff;
 }
 
-.input-box label,
-.gender-title h6 {
+.input-box label{
     font-size: 0.75rem;
     font-weight: 600;
     color: #000000c0;
@@ -149,12 +148,24 @@ body {
 .input-box input::placeholder {
     color: #000000be;
 }
+.gender-inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .gender-group {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     margin-top: 0.62rem;
     padding: 0 .5rem;
+}
+
+
+.gender-title h6 {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #000000c0;
 }
 
 .gender-input {

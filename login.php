@@ -13,7 +13,7 @@
 <body>
   <div class="container">
       <div class="form-image">
-          <img src="img/bg.svg" alt="">
+          <img src="img/login.svg" alt="">
       </div>
       <div class="form">
         <div class="sub-form">
@@ -38,7 +38,7 @@
 
               <div class="robot-inputs">
                   <div class="robot-title">
-                      <h6>Seja Bem-Vindo Novamente!</h6>
+                      <h6>É bom te ver denovo!</h6>
                   </div>
               </div>
 
