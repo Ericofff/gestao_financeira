@@ -337,6 +337,26 @@ nav.close ~ .dashboard .top{
 }
 
 .dash-content .boxes .box{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 12px;
+    width: calc(100% / 3 - 15px);
+    padding: 15px 20px;
     background-color: var(--box1-color);
+}
+
+.box .text{
+    white-space: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.box .number{
+    white-space: none;
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--text-color);
 }
