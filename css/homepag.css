@@ -300,3 +300,6 @@ nav.close ~ .dashboard .top{
     cursor: pointer;
 }
 
+.dashboard .dash-content{
+    padding-top: 50px;
+}
