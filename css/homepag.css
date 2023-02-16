@@ -28,6 +28,12 @@
     --tran-03: all 0.2s ease;
     }
 
+.name-profile{
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: var(--text-color);
+}
+
 body{
     min-height: 100vh;
     background-color: var(--primary-color);
@@ -271,10 +277,17 @@ nav.close ~ .dashboard .top{
 
 .top .search-box i{
     position: absolute;
-    left: 0;
+    left: 15px;
     z-index: 10;
     top: 50%;
     font-size: 22px;
     transform: translateY(-50%);
     color: var(--black-light-color);
 }
+
+.top img{
+    width: 40px;
+    border-radius: 50%;
+
+}
+
