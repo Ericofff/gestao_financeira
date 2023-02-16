@@ -126,7 +126,7 @@ nav .menu-items{
     position: relative;
 }
 
-.menu-items li a:hover:before{
+.nav-links li a:hover:before{
     content: "";
     position: absolute;
     left: -7px;
@@ -134,6 +134,10 @@ nav .menu-items{
     width: 5px;
     border-radius: 50%;
     background-color: var(--primary-color);
+}
+
+body.dark li a:hover:before{
+    background-color: var(--text-color);
 }
 
 .menu-items li a i{
@@ -162,6 +166,11 @@ nav.close li a .link-name{
 .nav-links li a:hover .link-name,
 .nav-links li a:hover i{
     color: var(--primary-color);
+}
+
+body.dark li a:hover .link-name,
+body.dark li a:hover i{
+    color: var(--text-color);
 }
 
 .menu-items .logout-mode{
@@ -288,6 +297,6 @@ nav.close ~ .dashboard .top{
 .top img{
     width: 40px;
     border-radius: 50%;
-
+    cursor: pointer;
 }
 
