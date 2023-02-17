@@ -52,6 +52,27 @@ body.dark{
     --title-icon-color: #CCC;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0b3cc1;
+}
+
+body.dark::-webkit-scrollbar-thumb:hover,
+body.dark .activity-data::-webkit-scrollbar-thumb:hover{
+    background: #3A3B3C;
+}
+
 nav{
     position: fixed;
     top: 0;
@@ -503,8 +524,8 @@ nav.close ~ .dashboard .top{
         width: calc(100% - 73px);
     }
 
-    .dash-content .activity .activity-data {
-        overflow-y: scroll;
+    .dashboard .top .sidebar-toggle{
+        display: none;
     }
 
 }
