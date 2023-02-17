@@ -347,6 +347,11 @@ nav.close ~ .dashboard .top{
     background-color: var(--box1-color);
 }
 
+.box i{
+    font-size: 35px;
+    color: var(--text-color);
+}
+
 .box .text{
     white-space: none;
     font-size: 18px;
@@ -359,4 +364,12 @@ nav.close ~ .dashboard .top{
     font-size: 40px;
     font-weight: 500;
     color: var(--text-color);
+}
+
+.boxes .box.box2{
+    background-color: var(--box2-color);
+}
+
+.boxes .box.box3{
+    background-color: var(--box3-color);
 }
