@@ -5,16 +5,22 @@ const emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]
 
 //botão de validar
 
-validar.addEventListener('click', (event) =>{
-    event.preventDefault
-    nameValidate();
-    lastnameValidate();
-    yearValidate();
-    emailValidate();
-    mainPasswordValidate();
-    comparePassword();
-})
 
+
+document.getElementById("input").addEventListener("input", function(event){
+
+    //busca conteúdo do input
+      var conteudo = document.getElementById("input").value;
+  
+      //valida conteudo do input 
+      if (conteudo !== null && conteudo !== '') {
+        //habilita o botão
+        document.getElementById("botao").disabled = false;
+      } else {
+        //desabilita o botão se o conteúdo do input ficar em branco
+        document.getElementById("botao").disabled = true;
+      }
+  });
 //erros vermelhos
 function setError(index){
     campos[index].style.outline = 'none';
@@ -32,6 +38,7 @@ function nameValidate(){
     if(campos[0].value.length <3)
     {
         setError(0);
+        $( "validar" ).prop( "disabled", true );
     }
     else
     {

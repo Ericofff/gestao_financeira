@@ -14,6 +14,16 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
+            $('button').attr('disabled', 'disabled');
+ 
+            $('input[type=text]').on('input', function() {
+                if ($(this).val() !== '') {
+                    $('button').removeAttr("disabled");
+                }
+                else {
+                    $('button').attr('disabled', 'disabled');
+                }
+            });
 			$().click(function(){
 				var nm_autor = $("#nm_autor").val();
 				$.ajax({
@@ -92,7 +102,7 @@
               </div>
               
               <div class="continue-button">
-                  <button><a id="validar" href="#">Finalizar Cadastro</a> </button>
+                  <button id="validar" ><a  href="#">Finalizar Cadastro</a> </button>
                 </div>
             </div>
             <div class="login-button">
