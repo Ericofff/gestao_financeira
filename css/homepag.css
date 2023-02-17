@@ -310,7 +310,6 @@ nav.close ~ .dashboard .top{
 }
 
 .dash-content .title i{
-    position: relative;
     height: 35px;
     width: 35px;
     background-color: var(--primary-color);
@@ -450,3 +449,62 @@ nav.close ~ .dashboard .top{
     }
 }
 
+@media (max-width: 780px){
+    .dash-content .boxes .box{
+        width: calc(100% / 2 - 15px);
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 560px){
+    .dash-content .boxes .box{
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 500px){
+    nav{
+        width: 73px;
+    }
+    nav.close{
+        width: 730px;
+    }
+    nav .logo_name{
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close .logo_name{
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav li a .link-name{
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav.close li a .link-name{
+        opacity: 0;
+        pointer-events: none;
+    }
+    nav ~ .dashboard{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav.close ~ .dashboard{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav ~ .dashboard .top{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav.close ~ .dashboard .top{
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+
+    .dash-content .activity .activity-data {
+        overflow-y: scroll;
+    }
+
+}
