@@ -28,7 +28,6 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--primary-color);
 }
 body.dark{
     --primary-color: #3A3B3C;
@@ -88,9 +87,10 @@ nav .logo-image{
     min-width: 45px;
 }
 nav .logo-image img{
-    width: 40px;
+    width: 70px;
     object-fit: cover;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 nav .logo-name .logo_name{
@@ -168,6 +168,7 @@ body.dark .nav-links li a:hover .link-name{
     display: flex;
     align-items: center;
     white-space: nowrap;
+    margin-bottom: 1rem;
 }
 .menu-items .mode-toggle{
     position: absolute;
@@ -178,6 +179,7 @@ body.dark .nav-links li a:hover .link-name{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    
 }
 .mode-toggle .switch{
     position: relative;
@@ -185,7 +187,8 @@ body.dark .nav-links li a:hover .link-name{
     height: 22px;
     width: 40px;
     border-radius: 25px;
-    background-color: var(--toggle-color);
+    /* background-color: var(--toggle-color); */
+    background-image: url(https://i.pinimg.com/originals/a9/02/c3/a902c36ba47e99e7330ff4ced84f7425.jpg);
 }
 .switch:before{
     content: "";
@@ -195,7 +198,7 @@ body.dark .nav-links li a:hover .link-name{
     transform: translateY(-50%);
     height: 15px;
     width: 15px;
-    background-color: var(--panel-color);
+    background-color: #fff;
     border-radius: 50%;
     transition: var(--tran-03);
 }
