@@ -102,4 +102,12 @@ function comparePassword(){
         setError(5);
     }
     
-}
+};
+
+
+//VIEW PASSWORD
+
+const eye = document.querySelector(".uil-eye");
+
+
+})

@@ -204,6 +204,15 @@ body {
     color: #fff;
 }
 
+.input-box .uil-eye{
+    font-size: 22px;
+}
+
+.text-input{
+    display: flex;
+    justify-content: space-between;
+}
+
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;
