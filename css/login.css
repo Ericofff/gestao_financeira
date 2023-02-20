@@ -176,6 +176,22 @@
     color: #fff;
 }
 
+.input-box .uil-eye{
+    font-size: 22px;
+}
+
+.text-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-input i{
+    cursor: pointer;
+}
+
+
+
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;
