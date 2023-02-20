@@ -211,6 +211,7 @@ body {
 .text-input{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 @media screen and (max-width: 1330px) {

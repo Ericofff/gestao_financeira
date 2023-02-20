@@ -123,3 +123,19 @@ function showPassword() {
         // eye.classList.add("uil-eye");
     }
   }
+
+function showPasswordtwo() {
+    const eye = document.querySelector(".two");
+    const password = document.querySelector("#confirmPassword");
+    if (password.type === "password") {
+      password.type = "text";
+      eye.classList.toggle("uil-eye-slash");
+      //   eye.classList.add("uil-eye-slash");
+      
+    }else{   
+        password.type = "password";
+        eye.classList.toggle("uil-eye-slash");
+        // eye.classList.remove("uil-eye-slash");
+        // eye.classList.add("uil-eye");
+    }
+  }

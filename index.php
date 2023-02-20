@@ -87,13 +87,16 @@
                             <label for="password">Senha </label>
                             <i class="uil uil-eye" onclick="showPassword()"></i>
                         </div>
-                      <input id="password" type="password" name="password" placeholder="Digite sua senha" class="required" oninput="mainPasswordValidate()">
-                      <span class="span-required">Senha de no mínimo 8 caracteres</span>
-                  </div>
-                  
-                  
-                  <div class="input-box">
-                      <label for="confirmPassword">Confirme sua Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" class="required" oninput="mainPasswordValidate()">
+                        <span class="span-required">Senha de no mínimo 8 caracteres</span>
+                    </div>
+                    
+                    
+                    <div class="input-box">
+                        <div class="text-input">
+                            <label for="confirmPassword">Confirme sua Senha</label>
+                            <i class="uil uil-eye two" onclick="showPasswordtwo()"></i>
+                        </div>
                       <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" class="required" oninput="comparePassword()">
                       <span class="span-required">Senhas devem ser compatíveis</span>
                     </div>
