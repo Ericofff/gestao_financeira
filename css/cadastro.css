@@ -214,6 +214,12 @@ body {
     align-items: center;
 }
 
+.text-input i{
+    cursor: pointer;
+}
+
+
+
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;
