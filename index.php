@@ -85,7 +85,7 @@
                     <div class="input-box">
                         <div class="text-input">
                             <label for="password">Senha </label>
-                            <i class="uil uil-eye"></i>
+                            <i class="uil uil-eye" onclick="showPassword()"></i>
                         </div>
                       <input id="password" type="password" name="password" placeholder="Digite sua senha" class="required" oninput="mainPasswordValidate()">
                       <span class="span-required">Senha de no mínimo 8 caracteres</span>
