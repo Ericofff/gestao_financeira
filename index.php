@@ -117,6 +117,7 @@
                 <p>Possuí uma conta? <a href="login.php">Entrar</a></p>
             </div>
         </div>
+  </div>
         <script src="js/cadastro.js"></script>
     </body>
     </html>

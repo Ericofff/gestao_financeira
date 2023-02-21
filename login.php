@@ -28,7 +28,7 @@
               <div class="input-group">
                   <div class="input-box">
                       <label for="email">E-mail</label>
-                      <input id="email" type="email" name="email" placeholder="Digite seu e-mail" class="required" oninput="emailValidate()">
+                      <input id="email" type="email" name="email" placeholder="Digite seu e-mail" class="required" oninput="emailValidate()" autocomplete="off">
                       <span class="span-required">Digite um email válido</span>
                   </div>
                   <div class="input-box">
@@ -50,7 +50,7 @@
               <div class="continue-button">
                   <button><a id="login" href="#">Finalizar Login</a> </button>
               </div>
-         </div>
+    </div>
          <div class="register-button">
              <p>Não possui uma conta? <a href="index.php">Cadastrar</a></p>
          </div>
