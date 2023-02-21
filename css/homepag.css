@@ -73,6 +73,8 @@ nav{
     background-color: var(--panel-color);
     border-right: 1px solid var(--border-color);
     transition: var(--tran-05);
+    animation: opacity2 1s ease-in-out;
+
 }
 nav.close{
     width: 73px;
@@ -206,6 +208,7 @@ body.dark .switch:before{
     left: 20px;
 }
 
+
 .dashboard{
     position: relative;
     left: 250px;
@@ -277,6 +280,7 @@ nav.close ~ .dashboard .top{
 
 .dashboard .dash-content{
     padding-top: 50px;
+    animation: opacity 1s ease-in-out;
 }
 .dash-content .title{
     display: flex;
@@ -317,16 +321,19 @@ nav.close ~ .dashboard .top{
     padding: 15px 20px;
     background-color: var(--box1-color);
     transition: var(--tran-05);
+    transition: var(--tran-03);
+}
+
+.dash-content .boxes .box:hover{
+    transform: translateY(-10%);
 }
 
 .boxes .box i{
     font-size: 35px;
     color: var(--text-color);
-    transition: var(--tran-03);
 }
 
 .boxes .box:hover i{
-    transform: translateY(-10%);
 }
 
 
@@ -373,6 +380,7 @@ nav.close ~ .dashboard .top{
     white-space: nowrap;
     color: var(--text-color);
 }
+
 
 @media (max-width: 1000px) {
     nav{
@@ -467,5 +475,32 @@ nav.close ~ .dashboard .top{
     nav.close ~ .dashboard .top{
         left: 0;
         width: 100%;
+    }
+}
+
+@keyframes opacity {
+    0%{
+        transform: translateY(-70%);
+    }
+    100%{
+        transform: translatey(0%);
+    }
+}
+
+@keyframes opacity2 {
+    0%{
+        transform: translatex(-50%);
+    }
+    100%{
+        transform: translatex(0%);
+    }
+}
+
+@keyframes box-opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
