@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="stylesheet" href="css/style.css">
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Lançamentos</title>
     <script crossorigin="anonymous" src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
     <script src="js/MaquinaDeEscrever.js"></script>
@@ -14,6 +16,16 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
+            $('button').attr('disabled', 'disabled');
+ 
+            $('input[type=text]').on('input', function() {
+                if ($(this).val() !== '') {
+                    $('button').removeAttr("disabled");
+                }
+                else {
+                    $('button').attr('disabled', 'disabled');
+                }
+            });
 			$().click(function(){
 				var nm_autor = $("#nm_autor").val();
 				$.ajax({
@@ -71,14 +83,20 @@
                     </div>
 
                     <div class="input-box">
-                      <label for="password">Senha</label>
-                      <input id="password" type="password" name="password" placeholder="Digite sua senha" class="required" oninput="mainPasswordValidate()">
-                      <span class="span-required">Senha de no mínimo 8 caracteres</span>
-                  </div>
-                  
-                  
-                  <div class="input-box">
-                      <label for="confirmPassword">Confirme sua Senha</label>
+                        <div class="text-input">
+                            <label for="password">Senha </label>
+                            <i class="uil uil-eye" onclick="showPassword()"></i>
+                        </div>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" class="required" oninput="mainPasswordValidate()">
+                        <span class="span-required">Senha de no mínimo 8 caracteres</span>
+                    </div>
+                    
+                    
+                    <div class="input-box">
+                        <div class="text-input">
+                            <label for="confirmPassword">Confirme sua Senha</label>
+                            <i class="uil uil-eye two" onclick="showPasswordtwo()"></i>
+                        </div>
                       <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" class="required" oninput="comparePassword()">
                       <span class="span-required">Senhas devem ser compatíveis</span>
                     </div>
@@ -92,13 +110,14 @@
               </div>
               
               <div class="continue-button">
-                  <button><a id="validar" href="#">Finalizar Cadastro</a> </button>
+                  <button id="validar" ><a  href="#">Finalizar Cadastro</a> </button>
                 </div>
             </div>
             <div class="login-button">
                 <p>Possuí uma conta? <a href="login.php">Entrar</a></p>
             </div>
         </div>
+  </div>
         <script src="js/cadastro.js"></script>
     </body>
     </html>

@@ -2,27 +2,27 @@ create database bd_gestao_financeira;
 use bd_gestao_financeira;
 
 create table tb_nivel(
-	cd_nivel primary key auto_increment,
+	cd_nivel int primary key auto_increment,
 	nm_nivel varchar(200)
 );
 
 create table tb_responsavel(
-	cd_responsavel primary key auto_increment,
+	cd_responsavel int primary key auto_increment,
 	nm_responsavel varchar(250)
 );
 
 create table tb_forma_pagto(
-	cd_forma_pagto primary key auto_increment,
+	cd_forma_pagto int primary key auto_increment,
 	nm_forma_pagto varchar(250)
 );
 
 create table categoria(
-	cd_categoria primary key auto_increment,
+	cd_categoria int primary key auto_increment,
 	nm_categoria varchar(250)
 );
 
 create table tb_usuario(
-	cd_usuario primary key auto_increment,
+	cd_usuario int primary key auto_increment,
 	nm_usuario varchar(250),
 	ds_login varchar(300),
 	ds_senha varchar(300),
@@ -31,7 +31,7 @@ create table tb_usuario(
 );
 
 create table tb_lancamento(
-	cd_lancamento primary key auto_increment,
+	cd_lancamento int primary key auto_increment,
 	ds_lancamento varchar(200) not null,
 	dt_lancamento date not null,
 	vl_lancamentos decimal(8,2) not null,
