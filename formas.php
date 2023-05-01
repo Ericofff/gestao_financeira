@@ -1,5 +1,11 @@
+<?php
+    session_start();
+    if (isset($_SESSION['email'])){
+        header('Location: index.php');
+    }else{
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +16,11 @@
     <!-- BOOSTRAP -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-     
+
+    <!----===== BootStrap 5 CSS ===== -->
+
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
@@ -26,29 +36,25 @@
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
+                <li><a href="home.php">
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dashboard</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="categorias.php">
                     <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Conteúdo</span>
+                    <span class="link-name">Categorias</span>
                 </a></li>
                 <li><a href="#">
                     <i class="uil uil-chart"></i>
-                    <span class="link-name">Análise</span>
+                    <span class="link-name">Formas</span>
                 </a></li>
                 <li><a href="#">
                     <i class="uil uil-thumbs-up"></i>
-                    <span class="link-name">Gostou</span>
+                    <span class="link-name">Responsável</span>
                 </a></li>
                 <li><a href="#">
                     <i class="uil uil-comments"></i>
-                    <span class="link-name">Comentários</span>
-                </a></li>
-                <li><a href="#">
-                    <i class="uil uil-share"></i>
-                    <span class="link-name">Compartilhar</span>
+                    <span class="link-name">Dependente</span>
                 </a></li>
             </ul>
             <ul class="logout-mode">                <li><a href="#">
@@ -78,7 +84,7 @@
                 <input type="text" placeholder="Buscar Finanças...">
             </div>
             
-            <span class="name-profile">Hi, Eric Junokas</span>
+            <span class="name-profile">Hi, <!--<< ?php echo $_SESSION['nome'];?> --></span>
             <i class="uil uil-user-circle"></i>
         </div>
 
@@ -96,61 +102,13 @@
                     </div>
                     <div class="box box2">
                         <i class="uil uil-comments"></i>
-                        <span class="text">Comentários</span>
+                        <span class="text">Entrada</span>
                         <span class="number">40,000</span>
                     </div>
                     <div class="box box3">
                         <i class="uil uil-share"></i>
-                        <span class="text">Total View</span>
+                        <span class="text">Saída</span>
                         <span class="number">30,000</span>
-                    </div>
-                </div>
-            </div>
-            <div class="overview activity">
-                <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Gestões recentes</span>
-                </div>
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Name</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                    </div>
-                    <div class="data email">
-                        <span class="data-title">Email</span>
-                        <span class="data-list">mayte.bronzatto@gmail.com</span>
-                        <span class="data-list">mayte.bronzatto@gmail.com</span>
-                        <span class="data-list">mayte.bronzatto@gmail.com</span>
-                        <span class="data-list">mayte.bronzatto@gmail.com</span>
-                        <span class="data-list">mayte.bronzatto@gmail.com</span>
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        <span class="data-list">2022-11-30</span>
-                        <span class="data-list">2022-11-30</span>
-                        <span class="data-list">2022-11-30</span>
-                        <span class="data-list">2022-11-30</span>
-                        <span class="data-list">2022-11-30</span>
-                    </div>
-                    <div class="data type">
-                        <span class="data-title">Type</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                        <span class="data-list">Maytê Bronzatto</span>
-                    </div>
-                    <div class="data status">
-                        <span class="data-title">Status</span>
-                        <span class="data-list">Open</span>
-                        <span class="data-list">Open</span>
-                        <span class="data-list">Open</span>
-                        <span class="data-list">Open</span>
-                        <span class="data-list">Open</span>
                     </div>
                 </div>
             </div>
@@ -158,5 +116,13 @@
     </section>
     
     <script src="js/toggle.js"></script>
+    <!-- BootStrap SRC -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>>
 </body>
 </html>
+<?php
+    }
+?>
